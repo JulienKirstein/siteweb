@@ -1,12 +1,22 @@
 ﻿<?php
-require 'test.php';
-echo getValue();
 
-require 'Modele.php';
-$vue = getVue();
-echo file_get_contents($vue);
-
-function actu() {
-echo "j'actualise ..............";
-}
-actu();
+//router
+if (!empty($_GET['page']) && is_file('controler_'.$_GET['page'].'.php'))
+    {
+        session_start();
+        include 'controler_'.$_GET['page'].'.php';
+    }
+else
+    {
+        if (isset($_SESSION))
+        {session_destroy;}
+        session_start();
+        $_SESSION['v1'] = '';
+        $_SESSION['v2'] = '';
+        $_SESSION['v3'] = '';
+        $_SESSION['v4'] = '';
+        $_SESSION['v5'] = '';
+        $_SESSION['v6'] = '';
+        include 'controler_0.php';
+    }
+?>

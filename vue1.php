@@ -3,13 +3,17 @@
     <p>Le prix de l'assurance annulation est de 20 euros quel que soit le nombre de voyageurs.</p>
 
     Destination:
-    <select name='cars'>
-        <option value='volvo'>Volvo XC90</option>
-        <option value='saab'>Saab 95</option>
-        <option value='mercedes'>Mercedes SLK</option>
-        <option value='audi'>Audi TT</option>
-    </select><br>
-    Nombre de places: <input type = 'text' onclick=''><br>
-    Assurance annulation: <input type = 'checkbox' onclick=''><br>
-    <input type = 'button' value = 'Etape suivante' onclick=''>
-    <input type = 'button' value = 'Annuler la reservation' onclick=''>
+
+    <form method="get"/>
+        <select name='cars'>
+            <option <?= str_repeat("selected", (int)('volvo' == $_SESSION['v1'])) ?> value='volvo'>Volvo XC90</option>
+            <option <?= str_repeat("selected", (int)('saab' == $_SESSION['v1'])) ?> value='saab'>Saab 95</option>
+            <option <?= str_repeat("selected", (int)('mercedes' == $_SESSION['v1'])) ?> value='mercedes'>Mercedes SLK</option>
+            <option <?= str_repeat("selected", (int)('audi' == $_SESSION['v1'])) ?> value='audi'>Audi TT</option>
+        </select><br>
+
+        Nombre de places: <input type='text' name='places' value="<?= $_SESSION['v2'] ?>"><br>
+        Assurance annulation: <input type='checkbox' name='assurance' <?= $_SESSION['v3'] ?>><br>
+        <button type="submit" name="page" value="2">Etape suivante</button>
+        <button type="submit" name="page" value="0">Annuler la reservation</button>
+    </form>

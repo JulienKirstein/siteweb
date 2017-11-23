@@ -1,7 +1,10 @@
 <h1>PASSAGER1</h1>
-    Nom: <input type = 'text' onclick=''><br>
-    Prenom: <input type = 'text' onclick=''><br>
-    Age: <input type = 'text' onclick=''><br>
-    <input type = 'button' value = 'Etape suivante' onclick=''>
-    <input type = 'button' value = 'Retour a la page precedente' onclick=''>
-    <input type = 'button' value = 'Annuler la reservation' onclick=''>
+
+    <form method="get"/>
+        Nom: <input type='text' name='nom' value="<?= $_SESSION['v4'] ?>"><br>
+        Prenom: <input type='text' name='prenom' value="<?= $_SESSION['v5'] ?>"><br>
+        Age: <input type='text' name='age' value="<?= $_SESSION['v6'] ?>"><br>
+        <button type="submit" name="page" value="3">Etape suivante</button>
+        <button type="submit" name="page" value="1">Retour a la page precedente</button>
+        <button type="submit" name="page" value="0">Annuler la reservation</button>
+    </form>

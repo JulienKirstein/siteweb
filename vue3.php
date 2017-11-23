@@ -6,6 +6,9 @@
     Nom Pierre Dupont<br>
     Age: 25<br>
     Assurance annulation: oui<br>
-    <input type = 'button' value = 'Confirmer' onclick=''>
-    <input type = 'button' value = 'Retour a la page precedente' onclick=''>
-    <input type = 'button' value = 'Annuler la reservation' onclick=''>
+
+    <form method="get"/>
+    <button type="submit" name="page" value="4">Confirmer</button>
+    <button type="submit" name="page" value="2">Retour à la page précédente</button>
+    <button type="submit" name="page" value="0">Annuler la reservation</button>
+    </form>

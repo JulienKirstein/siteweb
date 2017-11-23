@@ -11,7 +11,8 @@ function getValue() {
     global $defaultvalue;
     if ($value == 1)
     {
-    return $value;
+    //return $value;
+    return "fefefef";
     }
     else
     {return 0;}
