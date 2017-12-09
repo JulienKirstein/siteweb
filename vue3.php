@@ -1,11 +1,15 @@
 <h1>VALIDATION DES RESERVATIONS</h1>
-    Destination: Londres<br>
-    Nombre de places: 2<br>
-    Nom: Jean Durant<br>
-    Age: 5<br>
-    Nom Pierre Dupont<br>
-    Age: 25<br>
-    Assurance annulation: oui<br>
+    Destination: <?= getv1() ?><br>
+    Nombre de places: <?= getv2() ?><br>
+
+    <?php
+    foreach (range(0, sizeof(getv4())-1) as $i)
+        {
+           echo "Nom: ".getv5()[$i]." ".getv4()[$i]."<br>";
+           echo "Age: ".getv6()[$i]."<br>";
+        }
+    ?>
+    Assurance annulation: <?= getv3() == "checked" ? "oui": "non" ?><br>
 
     <form method="get"/>
     <button type="submit" name="page" value="4">Confirmer</button>

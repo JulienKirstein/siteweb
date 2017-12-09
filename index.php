@@ -14,9 +14,10 @@ else
         $_SESSION['v1'] = '';
         $_SESSION['v2'] = '';
         $_SESSION['v3'] = '';
-        $_SESSION['v4'] = '';
-        $_SESSION['v5'] = '';
-        $_SESSION['v6'] = '';
+        $_SESSION['v4'] = [];
+        $_SESSION['v5'] = [];
+        $_SESSION['v6'] = [];
+        $_SESSION['index'] = 1;
         include 'controler_0.php';
     }
 ?>
